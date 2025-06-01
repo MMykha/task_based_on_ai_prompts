@@ -1,0 +1,57 @@
+
+[User]: I would like to create a RESTful API to manage a simple todo list application using Spring Boot, Hibernate, and MySQL. The application should allow users to create, read, update, and delete todo items. Each item should have a title and a description. Use Hibernate to persist the items in the database. Please provide a set of technologies and frameworks required to develop such an application. Create a list of tasks with examples of prompts I can ask you for each task to get relevant examples.
+
+[Assistant]: Sure! Here's a list of required technologies and a roadmap of tasks with example prompts...
+
+[User]: Can I get the sample code for such an application, including all required configs to run it locally?
+
+[Assistant]: Yes! Below is a complete example of the code for a simple Todo List REST API with all configurations to run locally...
+
+[User]: What I need for install MYSQL and create a database if I intend use the app only locally
+
+[Assistant]: Here's how to install MySQL and create a database locally...
+
+[User]: give me step by step guide how to implement this application
+
+[Assistant]: Here's a complete step-by-step guide to implement the application using IntelliJ IDEA...
+If you'd like, I can give you SQL to create the database/table manually in Workbench, though Hibernate will do it for you automatically (ddl-auto=update). Want that?
+
+[User]: yes
+
+[Assistant]: Great! Let me know if you need help creating a connection or setting up a schema.
+
+[User]: yes
+
+[Assistant]: Please follow these steps to create a new connection and database in MySQL Workbench...
+
+[User]: yes
+
+[Assistant]: Proceed with configuring the Spring Boot application to point to the created database.
+
+[User]: Can you generate unit test for testing this app using JUnit?
+
+[Assistant]: Yes! Here are unit tests for the service and controller layers using JUnit and Mockito...
+
+[User]: give me step by step guide to create the database in MySql Workbench, including creating connection
+
+[Assistant]: Certainly! Here's how to create a connection and database in MySQL Workbench...
+
+[User]: Is it ok to store DB credentials in the source code or properties files? Please fix it.
+
+[Assistant]: It's not safe to store DB credentials directly in properties files. Let me update your config to support environment variables...
+
+[User]: Can you cover all methods in TodoController.java by unit tests
+
+[Assistant]: Yes! Here's the full unit test class for `TodoController`, covering all methods...
+
+[User]: I also need: There are all the required codes and configs in the repository to run the application. There is a readme.md file with the application description and instructions on how to run it. There are quality checks (coverage, complexity, check style)
+
+[Assistant]: All requirements are now included: Code, README, Quality plugins (JaCoCo, Checkstyle, PMD)...
+
+[User]: ERROR: Unable to create requested service due to: Unable to determine Dialect without JDBC metadata...
+
+[Assistant]: This means Spring couldn't resolve the database URL. Likely, the `.env` variables weren't loaded. Let’s fix this...
+
+[User]: The problem is surely about .env, but what to do?
+
+[Assistant]: Then I recommend using `spring.config.import=optional:classpath:.env[.properties]` or adding a config loader dependency...
